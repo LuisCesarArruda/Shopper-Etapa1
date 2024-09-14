@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": ""
+    "dev": "npx watch src/server.ts",
+    "build": "tsc --build"
   },
   "keywords": [],
   "author": "",
@@ -11,7 +12,9 @@
   "description": "",
   "dependencies": {
     "fastify": "^4.28.1",
-    "shopper-etapa1": "file:"
+    "fastify-type-provider-zod": "^2.0.0",
+    "shopper-etapa1": "file:",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^22.5.4",
