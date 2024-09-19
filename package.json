@@ -11,6 +11,7 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "@prisma/client": "^5.19.1",
     "fastify": "^4.28.1",
     "fastify-type-provider-zod": "^2.0.0",
     "shopper-etapa1": "file:",
@@ -18,6 +19,7 @@
   },
   "devDependencies": {
     "@types/node": "^22.5.4",
+    "prisma": "^5.19.1",
     "typescript": "^5.5.4"
   }
 }
