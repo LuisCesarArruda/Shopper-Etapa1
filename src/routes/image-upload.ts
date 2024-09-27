@@ -30,11 +30,17 @@ export async function imageUpload(app:FastifyInstance) {
                 }
             }}
             ,async (req,res)=>{
-
+                
 
                 const {image, id} = req.body
 
                 const buffer = Buffer.from(image, "base64")
+                //fazer a validaçao se há uma imagem feita no periodo de 1 mes
+                const sameImage = await prisma.image.findUnique({
+                    where: {
+                        
+                    }
+                })
 
                 const saveImage = await prisma.image.create({
                     data: {

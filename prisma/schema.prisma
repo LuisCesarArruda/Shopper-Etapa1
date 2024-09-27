@@ -8,8 +8,9 @@ datasource db {
 }
 
 model Image {
-    id           String   @id @default(uuid())
-    base64       Float
-    readAt       DateTime @default(now())
-    customerCode String   @unique
+    id            String   @id @default(uuid())
+    base64        Float
+    readAt        DateTime @default(now())
+    customerCode  String   @unique
+    typeOfReading String
 }
