@@ -15,6 +15,7 @@ export async function imageUpload(app:FastifyInstance) {
                     }, {
                         message: "String base64 inválida",
                     }),
+                    id: z.string()
                 }),
                 response: {
                     200: z.object({
@@ -31,16 +32,17 @@ export async function imageUpload(app:FastifyInstance) {
             ,async (req,res)=>{
 
 
-                const {image} = req.body
+                const {image, id} = req.body
 
                 const buffer = Buffer.from(image, "base64")
 
                 const saveImage = await prisma.image.create({
                     data: {
-                        image: buffer
+                        customerCode: id,
+                        image: buffer,
                     }
                 })
 
-                return "ola"
+                
         })
 }

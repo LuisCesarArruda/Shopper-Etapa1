@@ -9,7 +9,7 @@ datasource db {
 
 model Image {
     id           String   @id @default(uuid())
-    image        Bytes 
+    base64       Float
     readAt       DateTime @default(now())
     customerCode String   @unique
 }
