@@ -11,3 +11,6 @@ app.get("/", (req, res) => {
 app.listen({ port: 3333 }, () => {
     console.log("server entrou");
 });
+
+
+

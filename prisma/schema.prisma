@@ -9,8 +9,8 @@ datasource db {
 
 model Image {
     id            String   @id @default(uuid())
-    base64        Float
+    base64        Bytes
     readAt        DateTime @default(now())
-    customerCode  String   @unique
-    typeOfReading String
+    customerCode  String   @default(uuid())
+    typeOfReading String    
 }
